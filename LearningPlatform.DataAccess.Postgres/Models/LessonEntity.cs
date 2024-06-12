@@ -6,19 +6,17 @@ using System.Threading.Tasks;
 
 namespace LearningPlatform.DataAccess.Postgres.Models
 {
-    public class CourseEntity
+    public class LessonEntity
     {
         public Guid Id { get; set; }
 
-        public string Title { get; set; }=string.Empty;
+        public string Title { get; set; } = string.Empty;
 
         public string Description { get; set; } = string.Empty;
 
-        public decimal Price { get; set; } = 0;
+        public string LessonText { get; set; } = string.Empty;
+        public Guid CourseId { get; set; }
 
-        public List<LessonEntity> Lessons { get; set; } = new();
-         
+        public CourseEntity? Course { get; set; }
     }
-
-    
 }
