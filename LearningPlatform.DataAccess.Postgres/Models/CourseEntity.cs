@@ -16,8 +16,16 @@ namespace LearningPlatform.DataAccess.Postgres.Models
 
         public decimal Price { get; set; } = 0;
 
+        
+
+        public Guid AuthorId { get; set; }
+
+        public AuthorEntity? Author { get; set; }
+
         public List<LessonEntity> Lessons { get; set; } = new();
-         
+
+        public List<StudentEntity> Students { get; set; }= new();
+
     }
 
     
